@@ -1,3 +1,10 @@
+## 0.6.0 (2024-07-28)
+
+### Feat
+
+- **admin**: add an admin space
+- **pages**: setup basic pages and navigation  (#5)
+
 ## 0.5.0 (2024-07-28)
 
 ### Feat
