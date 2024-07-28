@@ -1,8 +1,8 @@
 {
     "name": "thea/daqueer",
     "type": "project",
-    "description": "Dur·e·s à Queer's website",
-    "version": "0.3.0",
+    "description": "Dur\u00b7e\u00b7s \u00e0 Queer's website",
+    "version": "0.4.0",
     "authors": [
         {
             "name": "Thea",
@@ -10,7 +10,10 @@
             "homepage": "https://bento.me/thea"
         }
     ],
-    "keywords": ["laravel", "framework"],
+    "keywords": [
+        "laravel",
+        "framework"
+    ],
     "license": "MIT",
     "require": {
         "php": "^8.2",
