@@ -15,10 +15,15 @@
             </button>
         </div>
         <div class="hidden lg:flex lg:gap-x-12">
-            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Product</a>
-            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Features</a>
-            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Marketplace</a>
-            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Company</a>
+            <a href="{{ route('events.incoming') }}" class="text-sm font-semibold leading-6 text-gray-900">
+                Événement
+            </a>
+            <a href="{{ route('associations.index') }}" class="text-sm font-semibold leading-6 text-gray-900">
+                Associations
+            </a>
+            <a href="{{ route('about') }}" class="text-sm font-semibold leading-6 text-gray-900">
+                À propos
+            </a>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
             <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a>
