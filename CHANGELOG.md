@@ -1,3 +1,11 @@
+## 0.7.0 (2024-07-28)
+
+### Feat
+
+- **navigation**: change responsive navigation for real pages
+- **front**: make responsive menu dynamic
+- admin space (#7)
+
 ## 0.6.0 (2024-07-28)
 
 ### Feat
