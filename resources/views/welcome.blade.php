@@ -1,4 +1,4 @@
 <x-layout>
-    <p>Coucou</p>
+    <livewire:overview-section />
 </x-layout>
 
