@@ -2,6 +2,10 @@
 
 namespace App\Providers;
 
+use App\Models\Association;
+use App\Models\Edition;
+use App\Models\Guest;
+use App\Models\Link;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -19,6 +23,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        Edition::unguard();
+        Association::unguard();
+        Guest::unguard();
+        Link::unguard();
     }
 }
