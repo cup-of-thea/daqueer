@@ -27,7 +27,7 @@ class EditionResource extends Resource
                 TextInput::make('title')
                     ->required()
                     ->maxLength(255)
-                    ->unique(),
+                    ->unique(ignoreRecord: true),
                 TextInput::make('video')->url()->nullable(),
                 FileUpload::make('image')
                     ->image()
