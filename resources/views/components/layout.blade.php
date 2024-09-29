@@ -9,8 +9,8 @@
 
     @vite('resources/css/app.css')
 </head>
-<body class="mx-auto max-w-7xl p-6 lg:px-8">
-    <livewire:navigation />
-    {{ $slot }}
+<body class="mx-auto max-w-7xl p-6 lg:px-8 bg-main">
+<livewire:navigation/>
+{{ $slot }}
 </body>
 </html>
