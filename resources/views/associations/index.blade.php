@@ -47,5 +47,6 @@
         </div>
     </div>
 
+    <x-association-invite/>
 </x-layout>
 

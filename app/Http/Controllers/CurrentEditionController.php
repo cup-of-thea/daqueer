@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Edition;
 use Illuminate\Contracts\View\View;
 
-class IncomingEditionController
+class CurrentEditionController
 {
     public function __invoke(): View
     {

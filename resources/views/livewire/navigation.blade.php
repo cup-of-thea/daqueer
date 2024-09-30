@@ -18,7 +18,7 @@
             </button>
         </div>
         <div class="hidden lg:flex lg:gap-x-12">
-            <a href="{{ route('events.incoming') }}" class="text-sm font-semibold leading-6 text-accent">
+            <a href="{{ route('events.current') }}" class="text-sm font-semibold leading-6 text-accent">
                 Événement
             </a>
             <a href="{{ route('associations.index') }}" class="text-sm font-semibold leading-6 text-accent">
@@ -53,7 +53,7 @@
                 <div class="mt-6 flow-root">
                     <div class="-my-6 divide-y divide-gray-500/10">
                         <div class="space-y-2 py-6">
-                            <a href="{{ route('events.incoming') }}"
+                            <a href="{{ route('events.current') }}"
                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-accent hover:bg-secondary">
                                 Événement
                             </a>

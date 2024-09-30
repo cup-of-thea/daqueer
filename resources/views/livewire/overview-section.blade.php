@@ -7,7 +7,7 @@
                     <div class="mx-auto max-w-2xl">
                         <div class="max-w-lg">
                             <div class="mt-12">
-                                <a href="{{ route('events.incoming') }}"
+                                <a href="{{ route('events.current') }}"
                                    class="space-y-4 md:space-x-6 md:space-y-0 md:inline-flex">
                                     @switch($this->edition->relative_time_position)
                                         @case(TimePositionEnum::PAST)
@@ -31,7 +31,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <a href="{{ route('events.incoming') }}">
+                            <a href="{{ route('events.current') }}">
                                 <h1 class="mt-10 text-4xl font-bold tracking-tight text-accent sm:text-6xl">
                                     {{ $this->edition->title }}
                                 </h1>
@@ -40,11 +40,11 @@
                                 {{ $this->edition->description }}
                             </p>
                             <div class="mt-10 flex items-center gap-x-6">
-                                <a href="{{ route('events.incoming') }}#lineup"
+                                <a href="{{ route('events.current') }}#lineup"
                                    class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                                     La lineup
                                 </a>
-                                <a href="{{ route('events.incoming') }}#assoc"
+                                <a href="{{ route('events.current') }}#assoc"
                                    class="text-sm font-semibold leading-6 text-accent">
                                     @if($this->edition->associations->count() > 1)
                                         Les associations

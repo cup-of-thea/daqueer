@@ -10,7 +10,7 @@ class EditionBuilder extends Builder
     {
         return $this
             ->whereNotNull('published_at')
-            //->where('is_current', true)
+            ->where('is_current', true)
             ->orderBy('start_at')
             ->limit(1);
     }
