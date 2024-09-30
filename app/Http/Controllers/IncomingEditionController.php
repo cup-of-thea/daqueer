@@ -9,6 +9,6 @@ class IncomingEditionController
 {
     public function __invoke(): View
     {
-        return view('events.show', ['edition' => Edition::incomingEdition()->first()]);
+        return view('events.show', ['edition' => Edition::currentEdition()->first()]);
     }
 }
