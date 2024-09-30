@@ -16,7 +16,8 @@ return new class extends Migration {
             $table->string('slug')->unique();
             $table->string('video')->nullable();
             $table->string('image')->nullable();
-            $table->text('description')->nullable();
+            $table->string('description')->nullable();
+            $table->boolean('is_current')->default(false);
             $table->dateTimeTz('published_at')->nullable();
             $table->dateTimeTz('start_at')->nullable();
             $table->dateTimeTz('end_at')->nullable();

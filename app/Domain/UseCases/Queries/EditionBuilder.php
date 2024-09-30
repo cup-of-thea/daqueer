@@ -6,11 +6,11 @@ use Illuminate\Database\Eloquent\Builder;
 
 class EditionBuilder extends Builder
 {
-    public function incomingEdition(): self
+    public function currentEdition(): self
     {
         return $this
             ->whereNotNull('published_at')
-            ->where('start_at', '>', now())
+            //->where('is_current', true)
             ->orderBy('start_at')
             ->limit(1);
     }

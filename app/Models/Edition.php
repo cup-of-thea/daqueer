@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Domain\UseCases\Queries\EditionBuilder;
+use App\Domain\ValueObjects\RelativeTimePosition;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -11,7 +12,7 @@ use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
 
 /**
- * @method static incomingEdition()
+ * @method static currentEdition()
  */
 class Edition extends Model
 {
@@ -37,6 +38,13 @@ class Edition extends Model
     {
         return Attribute::make(
             get: fn() => $this->start_at?->isoFormat('LL') . ' - ' . $this->end_at?->isoFormat('LL')
+        );
+    }
+
+    public function relativeTimePosition(): Attribute
+    {
+        return Attribute::make(
+            get: fn() => RelativeTimePosition::create($this->start_at, $this->end_at)->getPosition()
         );
     }
 

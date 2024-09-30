@@ -11,6 +11,6 @@ class OverviewSection extends Component
     #[Computed]
     public function edition(): ?Edition
     {
-        return Edition::incomingEdition()->first();
+        return Edition::currentEdition()->first();
     }
 }

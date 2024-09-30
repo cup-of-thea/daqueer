@@ -24,13 +24,11 @@
             <a href="{{ route('associations.index') }}" class="text-sm font-semibold leading-6 text-accent">
                 Associations
             </a>
-            <a href="{{ route('about') }}" class="text-sm font-semibold leading-6 text-accent">
-                À propos
-            </a>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="/admin/login" class="text-sm font-semibold leading-6 text-accent">Log in <span
-                        aria-hidden="true">&rarr;</span></a>
+            <a href="/admin/login" class="text-sm font-semibold leading-6 text-accent">
+                Log in <span aria-hidden="true">&rarr;</span>
+            </a>
         </div>
     </nav>
     @if($showMenu)
@@ -62,10 +60,6 @@
                             <a href="{{ route('associations.index') }}"
                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-accent hover:bg-secondary">
                                 Associations
-                            </a>
-                            <a href="{{ route('about') }}"
-                               class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-accent hover:bg-secondary">
-                                À propos
                             </a>
                         </div>
                         <div class="py-6">
