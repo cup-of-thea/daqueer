@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
+use App\Domain\UseCases\Commands\MakeEditionCurrentCommand;
 use App\Filament\Resources\AssociationEditionResource\RelationManagers\AssociationsRelationManager;
 use App\Filament\Resources\EditionResource\Pages;
-use App\Filament\Resources\EditionResource\RelationManagers;
 use App\Filament\Resources\LineupResource\RelationManagers\MembersRelationManager;
 use App\Models\Edition;
 use Filament\Forms\Components\DateTimePicker;
@@ -58,6 +58,14 @@ class EditionResource extends Resource
                 Tables\Columns\TextColumn::make('end_at')
                     ->dateTime('Y/m/d H:i')
                     ->sortable(),
+                Tables\Columns\ToggleColumn::make('is_current')
+                    ->label('Current')
+                    ->beforeStateUpdated(
+                        fn(Edition $edition, $state) => app(MakeEditionCurrentCommand::class)->makeCurrent(
+                            $edition->id,
+                            $state
+                        )
+                    ),
             ])
             ->filters([
                 //
