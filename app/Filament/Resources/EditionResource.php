@@ -2,8 +2,10 @@
 
 namespace App\Filament\Resources;
 
+use App\Filament\Resources\AssociationEditionResource\RelationManagers\AssociationsRelationManager;
 use App\Filament\Resources\EditionResource\Pages;
 use App\Filament\Resources\EditionResource\RelationManagers;
+use App\Filament\Resources\LineupResource\RelationManagers\MembersRelationManager;
 use App\Models\Edition;
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\FileUpload;
@@ -27,7 +29,7 @@ class EditionResource extends Resource
                 TextInput::make('title')
                     ->required()
                     ->maxLength(255)
-                    ->unique(),
+                    ->unique(ignoreRecord: true),
                 TextInput::make('video')->url()->nullable(),
                 FileUpload::make('image')
                     ->image()
@@ -73,7 +75,8 @@ class EditionResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            MembersRelationManager::class,
+            AssociationsRelationManager::class,
         ];
     }
 

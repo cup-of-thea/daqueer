@@ -1,11 +1,11 @@
 <?php
 
+use App\Http\Controllers\AssociationsController;
+use App\Http\Controllers\CurrentEditionController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', fn() => view('welcome'))->name('home');
 
-Route::get('/about', fn() => view('about'))->name('about');
+Route::get('/events/current', CurrentEditionController::class)->name('events.current');
 
-Route::get('/events/incoming', fn() => view('events.show'))->name('events.incoming');
-
-Route::get('/associations', fn() => view('associations.index'))->name('associations.index');
+Route::get('/associations', AssociationsController::class)->name('associations.index');
